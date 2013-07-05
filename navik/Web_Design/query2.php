@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-	<title>Navik-About Us</title>
+	<title>Navik-Export</title>
 	<meta charset="utf-8">
 	<link rel="icon" href="imgs/slogo.ico" type="image/x-icon">
 	<link rel="shortcut icon" href="imgs/slogo.ico" type="image/x-icon" />
@@ -62,9 +62,9 @@
             <div class="nav-collapse nav-collapse_  collapse">
                   <ul class="nav sf-menu">
                 <li ><a href="index.html">Home</a></li>
-		<li class="active"><a href="about.html">About</a></li>
+		<li><a href="about.html">About</a></li>
 		
-                <li class="sub-menu"><a href="service.html">Services</a>
+                <li class="sub-menu, active"><a href="service.html">Services</a>
                       <ul>
                     <li><a href="import.html">Import</a></li>
                     <li><a href="export.html">Export</a></li>
@@ -73,7 +73,6 @@
                     </li>
                 <li><a href="help.html">Help</a></li>
                
-                <li><a href="data.html">Data</a></li>
               </ul>
                 </div>
           </div>
@@ -88,17 +87,59 @@
           <div class="span12"> 
 
  <!--============================== content =================================-->
-      
-      <div id="content"><div class="ic">More Website Templates @ TemplateMonster.com. November19, 2012!</div>
-    <div class="container">
-                  <br>
-<br>
-<br>
-<br>
-<br><br><br><br>
- 
-  </div>
-    </div>
+<body>
+<?php
+
+$item=$_POST ["goods"];
+$search_term_esc = AddSlashes($item);
+
+mysql_connect("localhost","root","12345");
+@mysql_select_db("trade") or die("unable to select database");
+$sql = "SELECT * FROM itc_code WHERE des LIKE '%$search_term_esc%'";
+$result=mysql_query($sql);
+$num=mysql_numrows($result);
+$i=0;
+echo "<table border='3' bgcolor='yellow'>";
+echo"<th>ITC(HS)</th>";
+echo"<th>Item Description</th>";
+echo"<th>hs(4)</th>";
+echo"<th>hs(5)</th>";
+echo"<th>hs(6)</th>";
+echo"<th>hs(8)</th>";
+echo"<th>Policy</th>";
+echo"<th>Condition</th>";
+while ($i<$num) {
+$field1=mysql_result($result,$i,"itc");
+$field2=mysql_result($result,$i,"des");
+$field3=mysql_result($result,$i,"hs4");
+$field4=mysql_result($result,$i,"hs5");
+$field5=mysql_result($result,$i,"hs6");
+$field6=mysql_result($result,$i,"hs8");
+$field7=mysql_result($result,$i,"policy");
+$field8=mysql_result($result,$i,"con");
+echo "<tr>";
+echo "<td>".$field1."</td>";
+echo "<td>".$field2."</td>";
+echo "<td>".$field3."</td>";
+echo "<td>".$field4."</td>";
+echo "<td>".$field5."</td>";
+echo "<td>".$field6."</td>";
+echo "<td>".$field7."</td>";
+echo "<td>".$field8."</td>";
+echo "</tr>";
+
+//echo $field1;
+//echo " ";
+//echo $field2;
+//echo "<br>";
+
+
+$i++;
+}
+
+
+?>
+
 <!--============================== footer =================================-->
 <footer>
       <div class="container clearfix">
@@ -113,5 +154,6 @@
   </div>
     </footer>
 <script type="text/javascript" src="js/bootstrap.js"></script>
+
 </body>
 </html>

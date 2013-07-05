@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-	<title>Navik-About Us</title>
+	<title>Navik</title>
 	<meta charset="utf-8">
 	<link rel="icon" href="imgs/slogo.ico" type="image/x-icon">
 	<link rel="shortcut icon" href="imgs/slogo.ico" type="image/x-icon" />
@@ -61,8 +61,8 @@
             <a class="btn btn-navbar btn-navbar_" data-toggle="collapse" data-target=".nav-collapse_">Menu <span class="icon-bar"></span> </a>
             <div class="nav-collapse nav-collapse_  collapse">
                   <ul class="nav sf-menu">
-                <li ><a href="index.html">Home</a></li>
-		<li class="active"><a href="about.html">About</a></li>
+                <li class="active"><a href="index.html">Home</a></li>
+		<li><a href="about.html">About</a></li>
 		
                 <li class="sub-menu"><a href="service.html">Services</a>
                       <ul>
@@ -72,8 +72,7 @@
                   </ul>
                     </li>
                 <li><a href="help.html">Help</a></li>
-               
-                <li><a href="data.html">Data</a></li>
+             
               </ul>
                 </div>
           </div>
@@ -86,19 +85,86 @@
       <div class="container">
     <div class="row">
           <div class="span12"> 
-
- <!--============================== content =================================-->
+        <!--============================== slider =================================-->
+        <div class="flexslider">
+              <ul class="slides">
+            <li> <img src="imgs/8.jpg" alt="" > </li>
+            <li> <img src="imgs/9.jpg" alt="" > </li>
+            <li> <img src="imgs/10.jpg" alt="" > </li>
+            <li> <img src="imgs/11.jpg" alt="" > </li>
+            <li> <img src="imgs/12.jpg" alt="" > </li>
+          </ul>
+            </div>
+        <span id="responsiveFlag"></span>
+        <div class="block-slogan">
+              <h2>Welcome!</h2>
+              <div>
+            <p><a href="index.html" target="_blank" class="link-1">Click here</a> for more info about this  web app NAVIK.</p>
+          </div>
+            </div>
+      </div>
+        </div>
+  </div>
+      
+      <!--============================== content =================================-->
       
       <div id="content"><div class="ic">More Website Templates @ TemplateMonster.com. November19, 2012!</div>
     <div class="container">
-                  <br>
-<br>
-<br>
-<br>
-<br><br><br><br>
- 
+          <div class="row">
+        <article class="span12">
+              <h3>Services</h3>
+            </article>
+        <div class="clear"></div>
+        <ul class="thumbnails thumbnails-1 list-services">
+              <li class="span4">
+            <div class="thumbnail thumbnail-1"> <img  src="imgs/Export.jpg" alt="">
+                  <section> <a href="export.html" class="link-1"><h2>EXPORT</h2></a>
+                
+              </section>
+                </div>
+          </li>
+              <li class="span4">
+            <div class="thumbnail thumbnail-1"> <img  src="imgs/import.jpg" alt="">
+                  <section> <a href="import.html" class="link-1"><h2>IMPORT</h2></a>
+               
+              </section>
+                </div>
+          </li>
+              <li class="span4">
+            <div class="thumbnail thumbnail-1"> <img  src="imgs/map.jpg" alt="">
+                  <section> <a href="map.html" class="link-1"><h2>MAPS</h2></a>
+              
+              </section>
+                </div>
+          </li>
+              <li class="span4">
+            <div class="thumbnail thumbnail-1"> <img  src="imgs/data.jpg" alt="">
+                  <section> <a href="data.html" class="link-1"><h2>DATA </h2></a>
+                
+              </section>
+                </div>
+          </li>
+              <li class="span4">
+            <div class="thumbnail thumbnail-1"> <img  src="imgs/about.jpg" alt="">
+                  <section> <a href="about.html" class="link-1"><h2>LoremIpsum</h2> </a>
+                
+              </section>
+                </div>
+          </li>
+              <li class="span4">
+            <div class="thumbnail thumbnail-1"> <img  src="imgs/Help.jpg" alt="">
+                  <section> <a href="help.html" class="link-1"><h2>HELP</h2></a>
+                
+              </section>
+                </div>
+          </li>
+            </ul>
+      </div>
+        </div>
   </div>
     </div>
+
+
 <!--============================== footer =================================-->
 <footer>
       <div class="container clearfix">
